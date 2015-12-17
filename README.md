@@ -92,5 +92,3 @@ for i in range(num_messages):
 ```script
 $ python ./hello.py
 ```
-  
-* ref https://hub.docker.com/r/vimagick/tmail/
