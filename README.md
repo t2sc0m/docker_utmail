@@ -24,7 +24,7 @@ tmail:
     - "25:25"
     - "110:110"
   volumes:
-    - mail:/var/mail
+    - mail:/tmp/mail
   environment:
     - MAIL_NAME = mydomain.com
     - MAIL_PATH = /tmp/utmail
