@@ -6,7 +6,7 @@ RUN apt-get update &&             \
                        python-pip \
                        openssl && \
     apt-get clean &&              \
-    pip install twisted           \
+    pip install twisted
 
 ENV MAIL_NAME mydomain.com
 ENV MAIL_PATH /var/mail
@@ -21,5 +21,4 @@ CMD twistd -n mail --smtp=tcp:25                            \
                    --pop3=tcp:110                           \
                    --maildirdbmdomain=$MAIL_NAME=$MAIL_PATH \
                    --user=$MAIL_USER=$MAIL_PASS             \
-                   --bounce-to-postmaster                   \
                    $MAIL_OPTS
