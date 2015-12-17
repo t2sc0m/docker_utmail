@@ -4,7 +4,7 @@ MAINTAINER tescom <tescom@atdt01410.com>
 RUN apt-get update &&             \
     apt-get install -y python-dev \
                        python-pip \
-                       openssl    \
+                       openssl && \
     apt-get clean &&              \
     pip install twisted           \
 
