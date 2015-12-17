@@ -8,11 +8,11 @@ ubuntu + perl + SMTP/POP3
 ## IMAGE FROM
 ytnobody/base
 
-## ENVIRONMENT
-* MAIL_NAME     : Mail_Domain
-* MAIL_PATH     : /var/mail
-* MAIL_USER     : User_Name
-* MAIL_PASS     : User_Password
+## DEFAULT ENVIRONMENT
+* MAIL_NAME     : mydomain.com
+* MAIL_PATH     : /tmp/utmail
+* MAIL_USER     : admin    
+* MAIL_PASS     : admin        
 
 ## USAGE
 ---
@@ -26,10 +26,10 @@ tmail:
   volumes:
     - mail:/var/mail
   environment:
-    - MAIL_NAME = Mail_Domain
-    - MAIL_PATH = /var/mail
-    - MAIL_USER = User_Name
-    - MAIL_PASS = User_Password
+    - MAIL_NAME = mydomain.com
+    - MAIL_PATH = /tmp/utmail
+    - MAIL_USER = admin    
+    - MAIL_PASS = admin        
   restart: always
 ```
 ### You can pass additional arguments via environment variable MAIL_OPTS : 
